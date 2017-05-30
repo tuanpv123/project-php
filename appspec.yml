@@ -2,7 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /app/
-    destination: /var/www/html/
+    destination: /var/www/html/app/
+  - source: /index.html
+    destination: /var/www/html
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
@@ -15,4 +17,3 @@ hooks:
     - location: scripts/stop_server
       timeout: 300
       runas: root
-
